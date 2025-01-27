@@ -702,17 +702,18 @@
         - #RESERVATION
       -->
 
-      <section class="reservation" id="contact">
+      <section class="reservation" id="contact" id="">
+      
         <div class="container">
 
           <div class="form reservation-form bg-black-10">
-
+           
             <form action="" class="form-left">
-
-              <h2 class="headline-1 text-center">Online Reservation</h2>
+               <div>
+                <h2 class="headline-1 text-center">Online Reservation</h2>
 
               <p class="form-text text-center">
-                Booking request <a href="tel:+88123123456" class="link">0778553919</a>
+                Booking request <a href="tel:+88123123456" class="link">06-51-81-28-19</a>
                 or fill out the order form
               </p>
 
@@ -771,13 +772,36 @@
 
               <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
 
-              <button type="submit" class="btn btn-secondary">
-                <span class="text text-1">Book A Table</span>
-
-                <span class="text text-2" aria-hidden="true">Book A Table</span>
-              </button>
-
-            </form>
+            </div>       
+            <div class="faq-container">
+              <h1>Questions Fréquentes </h1>
+                <input type="hidden" name="_subject" value="Questions Fréquentes : ">
+                  <div class="faq-item">
+                      <h3 data-number="1">Quel est l'âge des enfants qui assisteront au mariage ?</h3>
+                      <input class="input-field" type="text" id="age" name="age" placeholder="Exemple : 3 à 10 ans" required>
+                  </div>
+      
+                  <div class="faq-item">
+                      <h3 data-number="2">Pendant combien de temps avez-vous besoin de nos services d'animation ?</h3>
+                      <input type="text" class="input-field" id="duration" name="duration" placeholder="Exemple : 3 heures, toute la soirée" required>
+                  </div>
+      
+                  <div class="faq-item">
+                      <h3 data-number="3">Y a-t-il des activités ou des thèmes spécifiques que vous souhaitez inclure ?</h3>
+                      <input type="text" class="input-field" id="activities" name="activities" placeholder="Exemple : Maquillage, bricolage, chasse au trésor" required>
+                  </div>
+      
+                  <div class="faq-item">
+                      <h3 data-number="4">Les enfants ont-ils des allergies ou des besoins spécifiques ?</h3>
+                      <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Allergie aux noix, jeux adaptés" required>
+                  </div>
+                </div>
+                   <button type="submit" class="btn btn-secondary">
+                    <span class="text text-1">Book A Table</span>
+                    <span class="text text-2" aria-hidden="true">Book A Table</span>
+                  </button>
+              </form>
+            
 
             <div class="form-right text-center" style="background-image: url('./assets/images/form-pattern.png')">
 
@@ -785,7 +809,7 @@
 
               <p class="contact-label">Réservez maintenant</p>
 
-              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">0778553919</a>
+              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">06-51-81-28-19</a>
 
               <div class="separator"></div>
 
@@ -803,10 +827,12 @@
               </p> -->
 
             </div>
-
+           
           </div>
 
         </div>
+      
+      </div>
       </section>
 
 

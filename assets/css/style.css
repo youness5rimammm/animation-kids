@@ -2168,3 +2168,110 @@ textarea.input-field {
   }
 
 }
+
+
+
+
+
+/* FAQ */
+
+.faq-container {
+  max-width: 800px;
+  margin: 50px auto 50px auto;
+  padding: 20px;
+  display: block;
+  background: #1a1a1a;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+}
+
+.faq-container  h1 {
+  text-align: center;
+  color: var(--white);
+  font-family: var(--fontFamily-forum);
+  font-weight: var(--weight-regular);
+  line-height: var(--lineHeight-2);  margin:40px 0px;
+  font-size: var(--fontSize-headline-1);
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.faq-item h3 {
+  color: var(--white);
+    font-family: var(--fontFamily-dm_sans);
+    font-size: var(--fontSize-body-4);
+    font-weight: var(--weight-regular);
+    line-height: var(--lineHeight-5);
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.faq-item h3::before {
+  content: attr(data-number) ". ";
+  color: var(--gold-crayola);
+  font-weight: bold;
+}
+
+.faq-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.faq-form input {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.faq-form input::placeholder {
+  color: #aaa;
+}
+
+.faq-form input:focus {
+  border-color: var(--gold-crayola);
+  outline: none;
+}
+/* --gold-crayola: hsl(197, 61%, 73%);
+--quick-silver: hsla(0, 0%, 65%, 1);
+--davys-grey: hsla(30, 3%, 34%, 1);
+--smoky-black-1: */
+.faq-form button {
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  background-color: var(--gold-crayola);
+  color: #000;
+  font-size: var(--fontSize-label-2);
+  font-weight: var(--weight-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-5);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.faq-form button:hover {
+  color: #fdfdfd;
+}
+
+@media (max-width: 600px) {
+  .faq-container {
+      padding: 15px;
+  }
+
+  .faq-container  h1 {
+      font-size: 1.5rem;
+  }
+
+  .faq-form input {
+      font-size: 0.9rem;
+  }
+
+  .faq-form button {
+      font-size: 0.9rem;
+  }
+}
