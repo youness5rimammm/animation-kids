@@ -910,6 +910,10 @@ body.nav-active { overflow: hidden; }
 
 .service .section-text { margin-block-end: 40px; }
 
+.about-content .section-text .span{
+  color: var(--gold-crayola);
+}
+
 .service-card { overflow: hidden; }
 
 .service-card .has-before {
@@ -1171,6 +1175,8 @@ body.nav-active { overflow: hidden; }
 
 
 
+
+
 /*-----------------------------------*\
   #RESERVATION
 \*-----------------------------------*/
@@ -1388,8 +1394,20 @@ textarea.input-field {
   margin-inline: auto;
   transition: var(--transition-1);
 }
+.footer-links {
+  color: #ffffff;
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-4);
+  margin-inline: auto;
+  transition: var(--transition-1);
+}
 
-.footer-link:is(:hover, :focus-visible) { color: var(--gold-crayola); }
+.footer-links:hover{
+  color: var(--gold-crayola);
+}
+
+
 
 .copyright {
   color: #ffffff;

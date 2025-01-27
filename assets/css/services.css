@@ -1387,7 +1387,6 @@
   }
   
   .footer-link:is(:hover, :focus-visible) { color: var(--gold-crayola); }
-  
   .copyright {
     color: #ffffff;
     line-height: var(--lineHeight-3);
