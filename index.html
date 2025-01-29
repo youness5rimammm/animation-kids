@@ -162,6 +162,15 @@
           </li>
 
           <li class="navbar-item">
+            <a href="#QuestionsFréquentes" class="navbar-link hover-underline">
+              <div class="separator"></div>
+
+              <span class="span">Questions Fréquentes</span>
+            </a>
+          </li>
+
+
+          <li class="navbar-item">
             <a href="#NosCréations" class="navbar-link hover-underline">
               <div class="separator"></div>
 
@@ -702,7 +711,7 @@
         - #RESERVATION
       -->
 
-      <section class="reservation" id="contact" id="">
+      <section class="reservation" id="contact">
       
         <div class="container">
 
@@ -710,11 +719,11 @@
            
             <form action="" class="form-left">
                <div>
-                <h2 class="headline-1 text-center">Online Reservation</h2>
+                <h2 class="headline-1 text-center">Réservation en ligne</h2>
 
               <p class="form-text text-center">
-                Booking request <a href="tel:+88123123456" class="link">06-51-81-28-19</a>
-                or fill out the order form
+                Demande de réservation <a href="tel:+88123123456" class="link">0778553919</a>
+                ou remplissez le formulaire de commande
               </p>
 
               <div class="input-wrapper">
@@ -723,7 +732,7 @@
                 <input type="tel" name="phone" placeholder="Phone Number" autocomplete="off" class="input-field">
               </div>
 
-              <div class="input-wrapper">
+              <!-- <div class="input-wrapper">
 
                 <div class="icon-wrapper">
                   <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
@@ -768,37 +777,92 @@
                   <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
                 </div>
 
-              </div>
+              </div> -->
 
               <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
 
             </div>       
-            <div class="faq-container">
+            <div class="faq-container" id="QuestionsFréquentes">
               <h1>Questions Fréquentes </h1>
                 <input type="hidden" name="_subject" value="Questions Fréquentes : ">
                   <div class="faq-item">
-                      <h3 data-number="1">Quel est l'âge des enfants qui assisteront au mariage ?</h3>
-                      <input class="input-field" type="text" id="age" name="age" placeholder="Exemple : 3 à 10 ans" required>
+                      <h3 data-number="1">Quelle est la date et l'heure exacte du mariage ? (5 juillet 2025 20h-00h)</h3>
+                      <input class="input-field" type="text" id="age" name="age" placeholder="(Exemple : Le mariage aura lieu le 5 juillet 2025 de 20h à 00h.)" required>
                   </div>
       
                   <div class="faq-item">
-                      <h3 data-number="2">Pendant combien de temps avez-vous besoin de nos services d'animation ?</h3>
-                      <input type="text" class="input-field" id="duration" name="duration" placeholder="Exemple : 3 heures, toute la soirée" required>
+                      <h3 data-number="2">Quel est l'adresse complète du lieu de réception du mariage ?</h3>
+                      <input type="text" class="input-field" id="duration" name="duration" placeholder="Exemple : Le mariage se déroulera à Salle des Fêtes Les Jardins, Casablanca, Maroc." required>
                   </div>
       
                   <div class="faq-item">
-                      <h3 data-number="3">Y a-t-il des activités ou des thèmes spécifiques que vous souhaitez inclure ?</h3>
-                      <input type="text" class="input-field" id="activities" name="activities" placeholder="Exemple : Maquillage, bricolage, chasse au trésor" required>
+                      <h3 data-number="3"> Combien d'enfants sont prévus d'assister au mariage ?</h3>
+                      <input type="text" class="input-field" id="activities" name="activities" placeholder="Exemple : Nous attendons 12 enfants." required>
                   </div>
       
                   <div class="faq-item">
-                      <h3 data-number="4">Les enfants ont-ils des allergies ou des besoins spécifiques ?</h3>
-                      <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Allergie aux noix, jeux adaptés" required>
+                      <h3 data-number="4">Quels sont les âges approximatifs des enfants participants ?</h3>
+                      <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Les enfants ont entre 3 et 10 ans." required>
                   </div>
+                  <div class="faq-item">
+                    <h3 data-number="5">Y a-t-il des enfants ayant des besoins spécifiques ou des allergies dont nous devrions être informés ?</h3>
+                    <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Oui, un enfant est allergique aux arachides et un autre ne tolère pas le lactose." required>
                 </div>
+                <div class="faq-item">
+                  <h3 data-number="6">Quelles sont les restrictions ou les règles spéciales du lieu de réception que nous devons respecter ?</h3>
+                  <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Il est interdit d’apporter des confettis et des ballons à l’hélium." required>
+              </div>
+              <div class="faq-item">
+                <h3 data-number="7">Quelle est la durée prévue de notre prestation d'animation pendant le mariage ?</h3>
+                <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : L'animation durera de 20h30 à 23h30." required>
+            </div>
+            <div class="faq-item">
+              <h3 data-number="8">Y a-t-il des demandes spécifiques en termes d'activités ou de thèmes pour l'animation des enfants ?</h3>
+              <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Oui, nous aimerions un thème super-héros et une mini-chasse au trésor." required>
+          </div>
+          <div class="faq-item">
+                          <h3 data-number="9">Y aura-t-il un espace spécifique dédié à l'animation des enfants ?</h3>
+                          <input class="input-field" type="text" id="age" name="age" placeholder="Exemple : Oui, il y a une salle à côté du jardin dédiée aux enfants." required>
+                      </div>
+          
+                      <div class="faq-item">
+                          <h3 data-number="10"> Aurons-nous accès à des prises de courant pour nos équipements électroniques si besoin ?</h3>
+                          <input type="text" class="input-field" id="duration" name="duration" placeholder="Exemple : Oui, il y a plusieurs prises disponibles dans la salle." required>
+                      </div>
+          
+                      <div class="faq-item">
+                          <h3 data-number="11">Aurions-nous des tables, chaises pour l'animation des enfants ?</h3>
+                          <input type="text" class="input-field" id="activities" name="activities" placeholder="Exemple : Oui, 4 tables et 10 petites chaises seront mises à disposition." required>
+                      </div>
+          
+                      <div class="faq-item">
+                          <h3 data-number="12">Qui sera notre principal point de contact le jour du mariage pour toute question ou problème éventuel ?</h3>
+                          <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Ce sera Mme Sara (témoin de la mariée) - 06 12 34 56 78." required>
+                      </div>
+                      <div class="faq-item">
+                        <h3 data-number="13">Y a-t-il des moments clés du mariage où nous devons être particulièrement attentifs à la présence des enfants comme pour les repas</h3>
+                        <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Oui, les enfants mangeront à une table dédiée vers 21h." required>
+                    </div>
+                    <div class="faq-item">
+                      <h3 data-number="14">Existe-t-il des plans de secours en cas de mauvais temps si une partie de l'animation doit se dérouler à l'extérieur ?</h3>
+                      <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple: Oui, en cas de pluie, l’animation sera déplacée à l’intérieur de la salle." required>
+                  </div>
+                  <div class="faq-item">
+                    <h3 data-number="15">Y a-t-il d'autres détails ou informations importantes que vous souhaitez nous communiquer pour assurer le succès de notre prestation d'animation pour les enfants ?</h3>
+                    <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple: Oui, nous aimerions un petit spectacle de marionnettes." required>
+                </div>
+                <div class="faq-item">
+                  <h3 data-number="16">La salle est-elle adaptée à des jeux sportifs (petit parcours, jeux de ballons, relais autre …) ?</h3>
+                  <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple: Oui, il y a un espace extérieur où les enfants pourront jouer." required>
+              </div>
+              <div class="faq-item">
+                <h3 data-number="17">Si c’est possible pour vous, me faire une liste de tous les prénoms des enfants pour faire ma petite touche personnelle 😊</h3>
+                <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple: Bien sûr ! Adam, Lina, Yassir, Sara, Amine, Mehdi, Salma, Rania, Sofiane, Anas," required>
+            </div>
+          </div>
                    <button type="submit" class="btn btn-secondary">
-                    <span class="text text-1">Book A Table</span>
-                    <span class="text text-2" aria-hidden="true">Book A Table</span>
+                    <span class="text text-1">Envoyer Maintenant</span>
+                    <span class="text text-2" aria-hidden="true">Envoyer Maintenant</span>
                   </button>
               </form>
             
@@ -809,7 +873,7 @@
 
               <p class="contact-label">Réservez maintenant</p>
 
-              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">06-51-81-28-19</a>
+              <a href="tel:+88123123456" class="body-1 contact-number hover-underline">0778553919</a>
 
               <div class="separator"></div>
 
@@ -1017,9 +1081,9 @@
 
           <a href="tel:+88123123456" class="body-4 contact-link">Booking Request : 0778553919</a>
 
-          <p class="body-4">
+          <!-- <p class="body-4">
             Open : 09:00 am - 01:00 pm
-          </p>
+          </p> -->
 
           <div class="wrapper">
             <div class="separator"></div>
@@ -1052,23 +1116,27 @@
         <ul class="footer-list">
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Home</a>
+            <a href="#Home" class="label-2 footer-link hover-underline">Home</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">FAQ</a>
+            <a href="#FAQ" class="label-2 footer-link hover-underline">FAQ</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Notre histoire</a>
+            <a href="#Notre histoire" class="label-2 footer-link hover-underline">Notre histoire</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Tarifs&Conditions</a>
+            <a href="#Tarifs&Conditions" class="label-2 footer-link hover-underline">Tarifs&Conditions</a>
           </li>
 
           <li>
-            <a href="#" class="label-2 footer-link hover-underline">Contact</a>
+            <a href="#QuestionsFréquentes" class="label-2 footer-link hover-underline">Questions Fréquentes</a>
+          </li>
+
+          <li>
+            <a href="#Contact" class="label-2 footer-link hover-underline">Contact</a>
           </li>
 
         </ul>
