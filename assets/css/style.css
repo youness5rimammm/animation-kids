@@ -20,7 +20,7 @@
    * COLORS
    */
 
-  --gold-crayola: hsl(197, 100%, 49%);
+  --gold-crayola: hsl(197, 74%, 62%);;
   --quick-silver: rgb(0, 0, 0);
   --davys-grey: hsla(30, 3%, 34%, 1);
   --smoky-black-1: rgb(255, 255, 255);
@@ -255,7 +255,7 @@ body.nav-active { overflow: hidden; }
 
 .label-1 { font-size: var(--fontSize-label-1); }
 
-.label-2 { font-size: var(--fontSize-label-2); }
+/* .label-2 { font-size: var(--fontSize-label-2); } */
 
 
 
@@ -796,6 +796,7 @@ body.nav-active { overflow: hidden; }
   min-height: 100vh;
   overflow: hidden;
   z-index: 1;
+  background: #000000;
 }
 
 .hero .slider-item {
@@ -2191,7 +2192,7 @@ textarea.input-field {
   margin: 50px auto 50px auto;
   padding: 20px;
   display: block;
-  background: #858484;
+  background: hsl(197, 100%, 76%);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
@@ -2221,7 +2222,7 @@ textarea.input-field {
 
 .faq-item h3::before {
   content: attr(data-number) ". ";
-  color: #ffffff;
+  color: #000000;
   font-weight: bold;
 }
 
