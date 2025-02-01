@@ -20,21 +20,21 @@
    * COLORS
    */
 
-  --gold-crayola: hsl(197, 61%, 73%);
-  --quick-silver: hsla(0, 0%, 65%, 1);
+  --gold-crayola: hsl(197, 100%, 49%);
+  --quick-silver: rgb(0, 0, 0);
   --davys-grey: hsla(30, 3%, 34%, 1);
-  --smoky-black-1: hsla(40, 12%, 5%, 1);
-  --smoky-black-2: hsla(30, 8%, 5%, 1);
-  --smoky-black-3: hsla(0, 3%, 7%, 1);
-  --eerie-black-1: hsla(210, 4%, 9%, 1);
-  --eerie-black-2: hsla(210, 4%, 11%, 1);
-  --eerie-black-3: hsla(180, 2%, 8%, 1);
-  --eerie-black-4: hsla(0, 0%, 13%, 1);
-  --white: hsla(0, 0%, 100%, 1);
+  --smoky-black-1: rgb(255, 255, 255);
+  --smoky-black-2: hsl(0, 0%, 100%);
+  --smoky-black-3: rgb(255, 255, 255);
+  --eerie-black-1: rgb(229, 239, 248);
+  --eerie-black-2: rgb(235, 245, 255);
+  --eerie-black-3: rgb(239, 255, 255);
+  --eerie-black-4: rgb(247, 247, 247);
+  --white: rgb(20, 20, 20);
   --white-alpha-20: hsla(0, 0%, 100%, 0.2);
   --white-alpha-10: hsla(0, 0%, 100%, 0.1);
-  --black: hsla(0, 0%, 0%, 1);
-  --black-alpha-80: hsla(0, 0%, 0%, 0.8);
+  --black: rgb(253, 250, 250);
+  --black-alpha-80: hsla(0, 8%, 95%, 0.8);
   --black-alpha-15: hsla(0, 0%, 0%, 0.15);
 
   /**
@@ -96,7 +96,7 @@
    * SHADOW
    */
 
-  --shadow-1: 0px 0px 25px 0px hsla(0, 0%, 0%, 0.25);
+  --shadow-1: 0px 0px 25px 0px hsla(0, 7%, 94%, 0.25);
 
   /**
    * BORDER RADIUS
@@ -144,7 +144,7 @@ ion-icon,
 textarea { display: block; }
 
 a {
-  color: inherit;
+  color: var(--gold-crayola);
   text-decoration: none;
 }
 
@@ -320,10 +320,21 @@ body.nav-active { overflow: hidden; }
   position: relative;
   color: var(--gold-crayola);
   font-weight: var(--weight-bold);
-  text-transform: uppercase;
-  letter-spacing: var(--letterSpacing-2);
+  /* text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-2); */
   margin-block-end: 12px;
 }
+
+.section-subtitles {
+  position: relative;
+  color: var(--gold-crayola);
+  font-weight: var(--weight-bold);
+  /* text-transform: uppercase;
+  letter-spacing: var(--letterSpacing-2); */
+  margin-block-end: 12px;
+}
+
+
 
 .section-subtitle::after {
   content: url('../images/separator.svg');
@@ -1350,7 +1361,7 @@ textarea.input-field {
 }
 
 .footer-brand :is(.body-4, .label-1) {
-  color: var(--quick-silver);
+  color: #000000;
   line-height: var(--lineHeight-3);
 }
 
@@ -2180,7 +2191,7 @@ textarea.input-field {
   margin: 50px auto 50px auto;
   padding: 20px;
   display: block;
-  background: #1a1a1a;
+  background: #858484;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
 }
@@ -2204,13 +2215,13 @@ textarea.input-field {
     font-size: var(--fontSize-body-4);
     font-weight: var(--weight-regular);
     line-height: var(--lineHeight-5);
-  color: #fff;
+  color: #000000;
   font-size: 1.5rem;
 }
 
 .faq-item h3::before {
   content: attr(data-number) ". ";
-  color: var(--gold-crayola);
+  color: #ffffff;
   font-weight: bold;
 }
 
