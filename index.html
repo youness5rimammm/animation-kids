@@ -161,13 +161,7 @@
             </a>
           </li>
 
-          <li class="navbar-item">
-            <a href="#QuestionsFréquentes" class="navbar-link hover-underline">
-              <div class="separator"></div>
-
-              <span class="span">Questions Fréquentes</span>
-            </a>
-          </li>
+          
 
 
           <li class="navbar-item">
@@ -813,7 +807,7 @@
 
           <div class="form reservation-form bg-black-10">
            
-            <form action="" class="form-left">
+            <form action="https://formspree.io/f/xldgnnqq" class="form-left" method="POST">
                <div>
                 <h2 class="headline-1 text-center">Réservation en ligne</h2>
 
@@ -825,135 +819,88 @@
               <div class="input-wrapper">
                 <input type="text" name="nom" placeholder="Votre nom" autocomplete="off" class="input-field">
 
-                <input type="tel" name="téléphone" placeholder="Numéro de téléphone" autocomplete="off" class="input-field">
+                <input type="number" name="téléphone" placeholder="Numéro de téléphone" autocomplete="off" class="input-field">
               </div>
 
-              <!-- <div class="input-wrapper">
-
-                <div class="icon-wrapper">
-                  <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
-
-                  <select name="person" class="input-field">
-                    <option value="1-person">12 enfants</option>
-                    <option value="2-person">24 enfants</option>
-                  </select>
-
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
-
-                <div class="icon-wrapper">
-                  <ion-icon name="calendar-clear-outline" aria-hidden="true"></ion-icon>
-
-                  <input type="date" name="reservation-date" class="input-field">
-
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
-
-                <div class="icon-wrapper">
-                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
-
-                  <select name="person" class="input-field">
-                    <option value="08:00am">08 : 00 am</option>
-                    <option value="09:00am">09 : 00 am</option>
-                    <option value="010:00am">10 : 00 am</option>
-                    <option value="011:00am">11 : 00 am</option>
-                    <option value="012:00am">12 : 00 am</option>
-                    <option value="01:00pm">01 : 00 pm</option>
-                    <option value="02:00pm">02 : 00 pm</option>
-                    <option value="03:00pm">03 : 00 pm</option>
-                    <option value="04:00pm">04 : 00 pm</option>
-                    <option value="05:00pm">05 : 00 pm</option>
-                    <option value="06:00pm">06 : 00 pm</option>
-                    <option value="07:00pm">07 : 00 pm</option>
-                    <option value="08:00pm">08 : 00 pm</option>
-                    <option value="09:00pm">09 : 00 pm</option>
-                    <option value="10:00pm">10 : 00 pm</option>
-                  </select>
-
-                  <ion-icon name="chevron-down" aria-hidden="true"></ion-icon>
-                </div>
-
-              </div> -->
-
-              <textarea name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
-
-            </div>       
+              <textarea  name="message" placeholder="Message" autocomplete="off" class="input-field"></textarea>
+            </div>   
+                <!-- faq -->
             <div class="faq-container" id="QuestionsFréquentes">
               <h1>Questions Fréquentes </h1>
                 <input type="hidden" name="_subject" value="Questions Fréquentes : ">
                   <div class="faq-item">
                       <h3 data-number="1">Quelle est la date et l'heure exacte du mariage ? (5 juillet 2025 20h-00h)</h3>
-                      <input class="input-field" type="text" id="age" name="age" placeholder="(Exemple : Le mariage aura lieu le 5 juillet 2025 de 20h à 00h.)" required>
+                      <input class="input-field" type="text" id="age" name="Quelle est la date et l'heure exacte du mariage ? (5 juillet 2025 20h-00h)" placeholder="(Exemple : Le mariage aura lieu le 5 juillet 2025 de 20h à 00h.)" required>
                   </div>
       
                   <div class="faq-item">
                       <h3 data-number="2">Quel est l'adresse complète du lieu de réception du mariage ?</h3>
-                      <input type="text" class="input-field" id="duration" name="duration" placeholder="Exemple : Le mariage se déroulera à Salle des Fêtes Les Jardins, Casablanca, Maroc." required>
+                      <input type="text" class="input-field" id="duration" name="Quel est l'adresse complète du lieu de réception du mariage ?" placeholder="Exemple : Le mariage se déroulera à Salle des Fêtes Les Jardins, Casablanca, Maroc." required>
                   </div>
       
                   <div class="faq-item">
                       <h3 data-number="3"> Combien d'enfants sont prévus d'assister au mariage ?</h3>
-                      <input type="text" class="input-field" id="activities" name="activities" placeholder="Exemple : Nous attendons 12 enfants." required>
+                      <input type="text" class="input-field" id="activities" name="Combien d'enfants sont prévus d'assister au mariage ?" placeholder="Exemple : Nous attendons 12 enfants." required>
                   </div>
       
                   <div class="faq-item">
                       <h3 data-number="4">Quels sont les âges approximatifs des enfants participants ?</h3>
-                      <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Les enfants ont entre 3 et 10 ans." required>
+                      <input type="text"class="input-field" id="allergies" name="Quels sont les âges approximatifs des enfants participants ?" placeholder="Exemple : Les enfants ont entre 3 et 10 ans." required>
                   </div>
                   <div class="faq-item">
                     <h3 data-number="5">Y a-t-il des enfants ayant des besoins spécifiques ou des allergies dont nous devrions être informés ?</h3>
-                    <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Oui, un enfant est allergique aux arachides et un autre ne tolère pas le lactose." required>
+                    <input type="text"class="input-field" id="allergies" name="Y a-t-il des enfants ayant des besoins spécifiques ou des allergies dont nous devrions être informés ?" placeholder="Exemple : Oui, un enfant est allergique aux arachides et un autre ne tolère pas le lactose." required>
                 </div>
                 <div class="faq-item">
                   <h3 data-number="6">Quelles sont les restrictions ou les règles spéciales du lieu de réception que nous devons respecter ?</h3>
-                  <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Il est interdit d’apporter des confettis et des ballons à l’hélium." required>
+                  <input type="text"class="input-field" id="allergies" name="Quelles sont les restrictions ou les règles spéciales du lieu de réception que nous devons respecter ?" placeholder="Exemple : Il est interdit d’apporter des confettis et des ballons à l’hélium." required>
               </div>
               <div class="faq-item">
                 <h3 data-number="7">Quelle est la durée prévue de notre prestation d'animation pendant le mariage ?</h3>
-                <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : L'animation durera de 20h30 à 23h30." required>
+                <input type="text"class="input-field" id="allergies" name="Quelle est la durée prévue de notre prestation d'animation pendant le mariage ?" placeholder="Exemple : L'animation durera de 20h30 à 23h30." required>
             </div>
             <div class="faq-item">
               <h3 data-number="8">Y a-t-il des demandes spécifiques en termes d'activités ou de thèmes pour l'animation des enfants ?</h3>
-              <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Oui, nous aimerions un thème super-héros et une mini-chasse au trésor." required>
+              <input type="text"class="input-field" id="allergies" name="Y a-t-il des demandes spécifiques en termes d'activités ou de thèmes pour l'animation des enfants ?" placeholder="Exemple : Oui, nous aimerions un thème super-héros et une mini-chasse au trésor." required>
           </div>
           <div class="faq-item">
                           <h3 data-number="9">Y aura-t-il un espace spécifique dédié à l'animation des enfants ?</h3>
-                          <input class="input-field" type="text" id="age" name="age" placeholder="Exemple : Oui, il y a une salle à côté du jardin dédiée aux enfants." required>
+                          <input class="input-field" type="text" id="age" name="Y aura-t-il un espace spécifique dédié à l'animation des enfants ?" placeholder="Exemple : Oui, il y a une salle à côté du jardin dédiée aux enfants." required>
                       </div>
           
                       <div class="faq-item">
                           <h3 data-number="10"> Aurons-nous accès à des prises de courant pour nos équipements électroniques si besoin ?</h3>
-                          <input type="text" class="input-field" id="duration" name="duration" placeholder="Exemple : Oui, il y a plusieurs prises disponibles dans la salle." required>
+                          <input type="text" class="input-field" id="duration" name="Aurons-nous accès à des prises de courant pour nos équipements électroniques si besoin ?" placeholder="Exemple : Oui, il y a plusieurs prises disponibles dans la salle." required>
                       </div>
           
                       <div class="faq-item">
                           <h3 data-number="11">Aurions-nous des tables, chaises pour l'animation des enfants ?</h3>
-                          <input type="text" class="input-field" id="activities" name="activities" placeholder="Exemple : Oui, 4 tables et 10 petites chaises seront mises à disposition." required>
+                          <input type="text" class="input-field" id="activities" name="Aurions-nous des tables, chaises pour l'animation des enfants ?" placeholder="Exemple : Oui, 4 tables et 10 petites chaises seront mises à disposition." required>
                       </div>
           
                       <div class="faq-item">
                           <h3 data-number="12">Qui sera notre principal point de contact le jour du mariage pour toute question ou problème éventuel ?</h3>
-                          <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Ce sera Mme Sara (témoin de la mariée) - 06 12 34 56 78." required>
+                          <input type="text"class="input-field" id="allergies" name="Qui sera notre principal point de contact le jour du mariage pour toute question ou problème éventuel ?" placeholder="Exemple : Ce sera Mme Sara (témoin de la mariée) - 06 12 34 56 78." required>
                       </div>
                       <div class="faq-item">
                         <h3 data-number="13">Y a-t-il des moments clés du mariage où nous devons être particulièrement attentifs à la présence des enfants comme pour les repas</h3>
-                        <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple : Oui, les enfants mangeront à une table dédiée vers 21h." required>
+                        <input type="text"class="input-field" id="allergies" name="Y a-t-il des moments clés du mariage où nous devons être particulièrement attentifs à la présence des enfants comme pour les repas" placeholder="Exemple : Oui, les enfants mangeront à une table dédiée vers 21h." required>
                     </div>
                     <div class="faq-item">
                       <h3 data-number="14">Existe-t-il des plans de secours en cas de mauvais temps si une partie de l'animation doit se dérouler à l'extérieur ?</h3>
-                      <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple: Oui, en cas de pluie, l’animation sera déplacée à l’intérieur de la salle." required>
+                      <input type="text"class="input-field" id="allergies" name="Existe-t-il des plans de secours en cas de mauvais temps si une partie de l'animation doit se dérouler à l'extérieur ?" placeholder="Exemple: Oui, en cas de pluie, l’animation sera déplacée à l’intérieur de la salle." required>
                   </div>
                   <div class="faq-item">
                     <h3 data-number="15">Y a-t-il d'autres détails ou informations importantes que vous souhaitez nous communiquer pour assurer le succès de notre prestation d'animation pour les enfants ?</h3>
-                    <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple: Oui, nous aimerions un petit spectacle de marionnettes." required>
+                    <input type="text"class="input-field" id="allergies" name="Y a-t-il d'autres détails ou informations importantes que vous souhaitez nous communiquer pour assurer le succès de notre prestation d'animation pour les enfants ?" placeholder="Exemple: Oui, nous aimerions un petit spectacle de marionnettes." required>
                 </div>
                 <div class="faq-item">
                   <h3 data-number="16">La salle est-elle adaptée à des jeux sportifs (petit parcours, jeux de ballons, relais autre …) ?</h3>
-                  <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple: Oui, il y a un espace extérieur où les enfants pourront jouer." required>
+                  <input type="text"class="input-field" id="allergies" name="La salle est-elle adaptée à des jeux sportifs (petit parcours, jeux de ballons, relais autre …) ?" placeholder="Exemple: Oui, il y a un espace extérieur où les enfants pourront jouer." required>
               </div>
               <div class="faq-item">
                 <h3 data-number="17">Si c’est possible pour vous, me faire une liste de tous les prénoms des enfants pour faire ma petite touche personnelle 😊</h3>
-                <input type="text"class="input-field" id="allergies" name="allergies" placeholder="Exemple: Bien sûr ! Adam, Lina, Yassir, Sara, Amine, Mehdi, Salma, Rania, Sofiane, Anas," required>
+                <input type="text"class="input-field" id="allergies" name="Si c’est possible pour vous, me faire une liste de tous les prénoms des enfants pour faire ma petite touche personnelle 😊" placeholder="Exemple: Bien sûr ! Adam, Lina, Yassir, Sara, Amine, Mehdi, Salma, Rania, Sofiane, Anas," required>
             </div>
           </div>
                    <button type="submit" class="btn btn-secondary">
