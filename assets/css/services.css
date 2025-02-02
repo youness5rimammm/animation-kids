@@ -1131,40 +1131,98 @@
     #TESTIMONIALS
   \*-----------------------------------*/
   
-  .testi {
-    padding-block-end: 340px;
-    position: static;
+.testimonial-carousel {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.testimonial-item {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 0px 140px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid var(--gold-crayola);
+  color: var(--gold-crayola);
+  font-size: 2.5rem;
+  padding: 15px 25px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(2px);
+  z-index: 10;
+}
+
+.prev-btn {
+  left: 20px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 215, 0, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.indicators {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.indicator {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.indicator.active {
+  background: var(--gold-crayola);
+  transform: scale(1.2);
+}
+
+@media (max-width: 992px) {
+  .carousel-btn {
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
   }
-  
-  .testi .quote {
-    font-size: 7rem;
-    font-family: var(--fontFamily-forum);
-    line-height: 0.7em;
+}
+
+@media (max-width: 576px) {
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    padding: 10px;
   }
-  
-  .testi .wrapper {
-    display: flex;
-    justify-content: center;
-    gap: 2px;
-    margin-block: 40px 50px;
-  }
-  
-  .testi .separator { animation: rotate360 15s linear infinite; }
-  
-  .profile .img {
-    margin-inline: auto;
-    border-radius: var(--radius-circle);
-    margin-block-end: 15px;
-  }
-  
-  .testi .profile-name {
-    color: var(--gold-crayola);
-    font-weight: var(--weight-bold);
-    text-transform: uppercase;
-    letter-spacing: var(--letterSpacing-3);
-  }
-  
-  
+}
   
   
   

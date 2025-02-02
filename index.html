@@ -767,31 +767,69 @@
         - #TESTIMONIALS
       -->
 
-      <section class="section testi text-center has-bg-image"
-        style="background-image: url('./assets/images/darker_image.png')" aria-label="testimonials">
-        <div class="container">
-
-          <div class="quote">”</div>
-
-          <p class="headline-2 testi-text" style="color: #fff;">
-            Les enfants étaient ravis grâce aux activités super bien organisées. L’équipe était très sympa et pro. Je recommande vivement pour un mariage sans stress pour les parents !
-          </p>
-
-          <div class="wrapper">
-            <div class="separator"></div>
-            <div class="separator"></div>
-            <div class="separator"></div>
+      <!-- Add this to your HTML -->
+      <section class="section testi text-center has-bg-image" 
+      style="background-image: url('./assets/images/darker_image.png')" 
+      aria-label="testimonials">
+      <div class="container">
+        <div class="testimonial-carousel">
+          <div class="carousel-inner">
+            <div class="testimonial-item">
+              <div class="quote">"</div>
+              <p class="headline-2 testi-text" style="color: #fff;">
+                L'animation proposée aux enfants a transformé l'événement en une fête inoubliable ! Les petits ont adoré les jeux interactifs et les activités créatives, et tout s'est déroulé avec un professionnalisme remarquable.
+              </p>
+              <div class="profile">
+                <p class="label-2 profile-name">Julia</p>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="quote">"</div>
+              <p class="headline-2 testi-text" style="color: #fff;">
+                Les animations dynamiques ont captivé les enfants, offrant aux parents l'opportunité de se détendre en toute confiance. Un service qui a su mettre en valeur chaque moment de la journée.
+              </p>
+              <div class="profile">
+                <p class="label-2 profile-name">Marie</p>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="quote">"</div>
+              <p class="headline-2 testi-text" style="color: #fff;">
+                L'énergie et la créativité de l'animateur ont créé un environnement ludique et sécurisé, où chaque enfant a pu s'épanouir tout en s'amusant. Un vrai bonheur pour tous !
+              </p>
+              <div class="profile">
+                <p class="label-2 profile-name">Claire</p>
+              </div>
+            </div>
+            <div class="testimonial-item">
+              <div class="quote">"</div>
+              <p class="headline-2 testi-text" style="color: #fff;">
+                Chaque activité était minutieusement pensée pour émerveiller les plus petits. Les sourires et les rires étaient contagieux, faisant de cette journée un souvenir impérissable pour toute la famille.
+              </p>
+              <div class="profile">
+                <p class="label-2 profile-name">Antoine</p>
+              </div>
+            </div>
           </div>
-
-          <!-- <div class="profile">
-            <img src="./assets/images/testi-avatar.jpg" width="100" height="100" loading="lazy" alt="Sam Jhonson"
-              class="img">
-
-            <p class="label-2 profile-name">julia</p>
-          </div> -->
-
+          
+          
+          <button class="carousel-btn prev-btn" aria-label="Previous testimonial">
+            ‹
+          </button>
+          <button class="carousel-btn next-btn" aria-label="Next testimonial">
+            ›
+          </button>
+          
+          <div class="indicators" role="tablist">
+            <button class="indicator active" role="tab" aria-label="Testimonial 1" aria-selected="true"></button>
+            <button class="indicator" role="tab" aria-label="Testimonial 2" aria-selected="false"></button>
+            <button class="indicator" role="tab" aria-label="Testimonial 3" aria-selected="false"></button>
+            <button class="indicator" role="tab" aria-label="Testimonial 4" aria-selected="false"></button>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
+    
 
 
 
@@ -1225,6 +1263,150 @@
   -->
   <script src="./assets/js/script.js"></script>
 
+ <script>document.addEventListener('DOMContentLoaded', function() {
+  // Get all necessary DOM elements
+  const carouselInner = document.querySelector('.carousel-inner');
+  const testimonials = document.querySelectorAll('.testimonial-item');
+  const indicators = document.querySelectorAll('.indicator');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+  
+  // Initialize variables
+  let currentIndex = 0;
+  let isTransitioning = false;
+  let touchStartX = 0;
+  let touchEndX = 0;
+  let autoPlayInterval;
+
+  // Function to show a specific testimonial
+  function showTestimonial(index) {
+      if (isTransitioning) return;
+      isTransitioning = true;
+
+      // Remove active class from all testimonials
+      testimonials.forEach(testimonial => {
+          testimonial.classList.remove('active');
+          testimonial.setAttribute('aria-hidden', 'true');
+      });
+
+      // Add active class to current testimonial
+      testimonials[index].classList.add('active');
+      testimonials[index].setAttribute('aria-hidden', 'false');
+
+      // Update indicators
+      indicators.forEach((indicator, i) => {
+          indicator.classList.toggle('active', i === index);
+          indicator.setAttribute('aria-selected', i === index);
+      });
+
+      // Reset transition flag after animation completes
+      setTimeout(() => {
+          isTransitioning = false;
+      }, 600);
+  }
+
+  // Function to show next testimonial
+  function nextTestimonial() {
+      currentIndex = (currentIndex + 1) % testimonials.length;
+      showTestimonial(currentIndex);
+  }
+
+  // Function to show previous testimonial
+  function prevTestimonial() {
+      currentIndex = (currentIndex - 1 + testimonials.length) % testimonials.length;
+      showTestimonial(currentIndex);
+  }
+
+  // Touch event handlers
+  function handleTouchStart(e) {
+      touchStartX = e.touches[0].clientX;
+  }
+
+  function handleTouchMove(e) {
+      if (!touchStartX) return;
+      e.preventDefault();
+  }
+
+  function handleTouchEnd(e) {
+      if (!touchStartX) return;
+      
+      touchEndX = e.changedTouches[0].clientX;
+      const swipeDistance = touchStartX - touchEndX;
+
+      if (Math.abs(swipeDistance) > 50) { // Minimum swipe distance
+          if (swipeDistance > 0) {
+              nextTestimonial();
+          } else {
+              prevTestimonial();
+          }
+      }
+
+      touchStartX = 0;
+      touchEndX = 0;
+  }
+
+  // Start autoplay
+  function startAutoplay() {
+      autoPlayInterval = setInterval(nextTestimonial, 8000);
+  }
+
+  // Stop autoplay
+  function stopAutoplay() {
+      clearInterval(autoPlayInterval);
+  }
+
+  // Add event listeners for buttons
+  prevBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      prevTestimonial();
+      stopAutoplay();
+      startAutoplay();
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      nextTestimonial();
+      stopAutoplay();
+      startAutoplay();
+  });
+
+  // Add event listeners for indicators
+  indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+          if (currentIndex === index || isTransitioning) return;
+          currentIndex = index;
+          showTestimonial(currentIndex);
+          stopAutoplay();
+          startAutoplay();
+      });
+  });
+
+  // Add keyboard navigation
+  document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') {
+          prevTestimonial();
+          stopAutoplay();
+          startAutoplay();
+      } else if (e.key === 'ArrowRight') {
+          nextTestimonial();
+          stopAutoplay();
+          startAutoplay();
+      }
+  });
+
+  // Add touch event listeners
+  carouselInner.addEventListener('touchstart', handleTouchStart, { passive: false });
+  carouselInner.addEventListener('touchmove', handleTouchMove, { passive: false });
+  carouselInner.addEventListener('touchend', handleTouchEnd);
+
+  // Add mouse hover events for autoplay
+  carouselInner.addEventListener('mouseenter', stopAutoplay);
+  carouselInner.addEventListener('mouseleave', startAutoplay);
+
+  // Initialize the carousel
+  showTestimonial(0);
+  startAutoplay();
+});</script>
   <!-- 
     - ionicon link
   -->
